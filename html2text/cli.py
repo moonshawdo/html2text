@@ -114,6 +114,16 @@ def main():
             "line breaks. NOTE: Requires --body-width=0"
         )
     )
+    p.add_option(
+        "--user-agent",
+        type="string",
+        dest="user_agent",
+        default="curl/0.9",
+        help=(
+            "Use a user-agent to fetch url data,default: %default"
+         )
+    )
+
     (options, args) = p.parse_args()
 
     # process input
@@ -127,7 +137,9 @@ def main():
 
         if file_.startswith('http://') or file_.startswith('https://'):
             baseurl = file_
-            j = urllib.urlopen(baseurl)
+            request = urllib.Request(baseurl)
+            request.add_header('User-Agent', options.user_agent)
+            j = urllib.urlopen(request)
             data = j.read()
             if encoding is None:
                 try:

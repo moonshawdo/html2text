@@ -9,4 +9,4 @@ except ImportError:  # Python3
 try:  # Python3
     import urllib.request as urllib
 except ImportError:
-    import urllib
+    import urllib2 as urllib
