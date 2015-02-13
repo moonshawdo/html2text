@@ -11,7 +11,7 @@ ESCAPE_SNOB = 0
 LINKS_EACH_PARAGRAPH = 0
 
 # Wrap long lines at position. 0 for no wrapping. (Requires Python 2.3.)
-BODY_WIDTH = 78
+BODY_WIDTH = 0
 
 # Don't show internal links (href="#local-anchor") -- corresponding link
 # targets won't be visible in the plain text file anyway.
@@ -107,7 +107,7 @@ UNIFIABLE = {
     'rlm': ''
 }
 
-BYPASS_TABLES = False
+BYPASS_TABLES = True
 
 # Use a single line break after a block element rather an two line breaks.
 # NOTE: Requires body width setting to be 0.

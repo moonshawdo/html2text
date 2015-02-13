@@ -15,55 +15,55 @@ def main():
         dest="ignore_emphasis",
         action="store_true",
         default=config.IGNORE_EMPHASIS,
-        help="don't include any formatting for emphasis"
+        help="don't include any formatting for emphasis,default:%default"
     )
     p.add_option(
         "--ignore-links",
         dest="ignore_links",
         action="store_true",
         default=config.IGNORE_ANCHORS,
-        help="don't include any formatting for links")
+        help="don't include any formatting for links,default:%default")
     p.add_option(
         "--protect-links",
         dest="protect_links",
         action="store_true",
         default=config.PROTECT_LINKS,
         help=("protect links from line breaks surrounding them " +
-              "with angle brackets"))
+            "with angle brackets,default:%default"))
     p.add_option(
         "--ignore-images",
         dest="ignore_images",
         action="store_true",
         default=config.IGNORE_IMAGES,
-        help="don't include any formatting for images"
+        help="don't include any formatting for images,default:%default"
     )
     p.add_option(
         "--images-to-alt",
         dest="images_to_alt",
         action="store_true",
         default=config.IMAGES_TO_ALT,
-        help="Discard image data, only keep alt text"
+        help="Discard image data, only keep alt text,default:%default"
     )
     p.add_option(
         "-g", "--google-doc",
         action="store_true",
         dest="google_doc",
         default=False,
-        help="convert an html-exported Google Document"
+        help="convert an html-exported Google Document,default:%default"
     )
     p.add_option(
         "-d", "--dash-unordered-list",
         action="store_true",
         dest="ul_style_dash",
         default=False,
-        help="use a dash rather than a star for unordered list items"
+        help="use a dash rather than a star for unordered list items,default:%default"
     )
     p.add_option(
         "-e", "--asterisk-emphasis",
         action="store_true",
         dest="em_style_asterisk",
         default=False,
-        help="use an asterisk rather than an underscore for emphasized text"
+        help="use an asterisk rather than an underscore for emphasized text,default:%default"
     )
     p.add_option(
         "-b", "--body-width",
@@ -71,7 +71,7 @@ def main():
         action="store",
         type="int",
         default=config.BODY_WIDTH,
-        help="number of characters per output line, 0 for no wrap"
+        help="number of characters per output line, 0 for no wrap,default:%default"
     )
     p.add_option(
         "-i", "--google-list-indent",
@@ -79,7 +79,7 @@ def main():
         action="store",
         type="int",
         default=config.GOOGLE_LIST_INDENT,
-        help="number of pixels Google indents nested lists"
+        help="number of pixels Google indents nested lists,default:%default"
     )
     p.add_option(
         "-s", "--hide-strikethrough",
@@ -87,7 +87,7 @@ def main():
         dest="hide_strikethrough",
         default=False,
         help="hide strike-through text. only relevant when -g is "
-             "specified as well"
+             "specified as well,default:%default"
     )
     p.add_option(
         "--escape-all",
@@ -95,14 +95,14 @@ def main():
         dest="escape_snob",
         default=False,
         help="Escape all special characters.  Output is less readable, but "
-             "avoids corner case formatting issues."
+             "avoids corner case formatting issues.,default:%default"
     )
     p.add_option(
         "--bypass-tables",
         action="store_true",
         dest="bypass_tables",
         default=config.BYPASS_TABLES,
-        help="Format tables in HTML rather than Markdown syntax."
+        help="Format tables in HTML rather than Markdown syntax.default:%default"
     )
     p.add_option(
         "--single-line-break",
