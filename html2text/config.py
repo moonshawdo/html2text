@@ -107,7 +107,7 @@ UNIFIABLE = {
     'rlm': ''
 }
 
-BYPASS_TABLES = True
+BYPASS_TABLES = False
 
 # Use a single line break after a block element rather an two line breaks.
 # NOTE: Requires body width setting to be 0.
