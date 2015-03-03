@@ -230,6 +230,8 @@ def escape_md_section(text, snob=False):
 
     if snob:
         text = config.RE_MD_CHARS_MATCHER_ALL.sub(r"\\\1", text)
+    else:
+        text = config.RE_MD_emphasisCHARS_MATCHER.sub(r"\\\1", text)
 
     text = config.RE_MD_DOT_MATCHER.sub(r"\1\\\2", text)
     text = config.RE_MD_PLUS_MATCHER.sub(r"\1\\\2", text)
